@@ -21,7 +21,9 @@ const Home: NextPage<HomeProps> = ({ initialItems, error }) => {
     const query = qs.stringify(filters);
 
     try {
-      const res = await fetch("http://localhost:4242/v1/matches?" + query);
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/v1/matches?` + query
+      );
       const json = await res.json();
 
       setItems(json.items);
@@ -53,8 +55,15 @@ const Home: NextPage<HomeProps> = ({ initialItems, error }) => {
 
 export const getServerSideProps = async () => {
   try {
+    const query = qs.stringify({
+      limit: 1000,
+      skip: 0,
+      from: "2022-02-16",
+      to: "2022-02-19",
+    });
+
     const res = await fetch(
-      "http://localhost:4242/v1/matches?limit=1000&skip=0&from=2022-02-16&to=2022-02-19"
+      `${process.env.NEXT_PUBLIC_API_URL}/v1/matches?${query}`
     );
     const json = await res.json();
     return {
