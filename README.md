@@ -1,4 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Faceit stats api
+
+This is the api project for tracking personal faceit stats
+For the api go to: https://github.com/MatiasLappalainen/faceit-stats-api
+
+> Note this is still a work in progress
 
 ## Getting Started
 
