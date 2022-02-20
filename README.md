@@ -6,6 +6,8 @@ This is a repostory for the frontend and api can be found at: https://github.com
 
 ## Getting Started
 
+- Run command `cp .env.example .env.local` to copy enviroment variables
+
 First, run the development server:
 
 ```bash
